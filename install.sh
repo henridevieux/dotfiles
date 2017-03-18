@@ -5,7 +5,13 @@
 
 DOTFILES_DIR=~/dotfiles
 BACKUP_DIR=~/.dotfiles_backup
-MANAGED_FILES="bashrc bash_functions bash_profile bash_aliases vimrc vim"
+MANAGED_FILES="bashrc\
+               bash_functions\
+               bash_profile\
+               bash_aliases\
+               tmux.conf\
+               vimrc\
+               vim"
 
 # create dotfiles_old in homedir
 echo "Creating backup dir: $BACKUP_DIR"
