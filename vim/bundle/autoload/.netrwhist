@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/hdevieux/projects/flow-proxy'
+let g:netrw_dirhist_2='/Users/hdevieux/gocode/src/github.com/golang/lint/misc/vim'
+let g:netrw_dirhist_3='/Users/hdevieux/projects/maestro'
+let g:netrw_dirhist_4='/Users/hdevieux/projects/uber-puppet-manifests/modules/systemd/manifests/tmpfiles'
+let g:netrw_dirhist_5='/Users/hdevieux/projects/uber-puppet-manifests/modules/systemd/manifests/tmpfiles/config'
+let g:netrw_dirhist_6='/Users/hdevieux/Dropbox/Backups/work_laptop/iTerm'
+let g:netrw_dirhist_7='/Users/hdevieux/projects/flow-proxy'
+let g:netrw_dirhist_8='/Users/hdevieux/projects/flow-proxy/src'
+let g:netrw_dirhist_9='/Users/hdevieux/gocode/src/code.uber.internal/go-common.git/x/log'
