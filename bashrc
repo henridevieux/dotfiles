@@ -29,8 +29,12 @@ export EDITOR=/usr/bin/vim
 
 export PATH=/Users/hdevieux/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
+# Mac specific settings
 if [ "$(uname)" == 'Darwin' ]; then
     export PATH=$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH:$HOME/bin
+
+    # Fixes a bug with tmux 2.2
+    export EVENT_NOKQUEUE=1
 fi
 
 
