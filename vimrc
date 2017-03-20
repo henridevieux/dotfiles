@@ -1,9 +1,9 @@
-" Henris complete VIM config
+" hdevieux Vim configuration
 
 "----------------------------------"
 "          General Stuff           "
 "----------------------------------"
-set history=250
+set history=50
 
 let mapleader = ","
 let g:mapleader = ","
@@ -15,7 +15,8 @@ nmap <leader>d :ConqueTermSplit bash<cr>
 nmap <leader>j <C-W><C-W>
 
 execute pathogen#infect('~/.vim/bundle/{}')
-filetype plugin indent on
+
+set encoding=utf8
 
 set runtimepath+=$HOME/.vim/plugin/
 
@@ -51,50 +52,30 @@ set confirm
 
 set hlsearch
 
-set cursorline
+syntax enable
+set showmatch
 
-
-"----------------------------------"
-"           Airline Conf           "
-"----------------------------------"
-let g:airline_left_sep='>'
-
+" Disabling this for now
+" set cursorline
+" set nocursorcolumn
 
 "----------------------------------"
 " Some Python developement stuff:
 "----------------------------------"
-":filetype on
-"set background=dark
-"set tabstop=8
-"set expandtab
-"set softtabstop=4
-"set shiftwidth=4
-"filetype indent on
-"let g:syntastic_python_checkers = ["flake8"]
-"let g:syntastic_python_flake8_args = "--max-line-length=160"
-
+autocmd Filetype python setlocal expandtab ts=4 sw=4 sts=4
+let g:syntastic_python_checkers = ["flake8"]
+let g:syntastic_python_flake8_args = "--max-line-length=160"
 
 "----------------------------------"
 " Some C/C++ developement stuff:
 "----------------------------------"
-:filetype on
-set background=dark
-set tabstop=4
-set noexpandtab
-set softtabstop=4
-set shiftwidth=4
-filetype indent on
-
+autocmd Filetype cpp setlocal noexpandtab ts=4 sw=4 sts=4
+autocmd Filetype c setlocal noexpandtab ts=4 sw=4 sts=4
 
 "----------------------------------"
 "             Colors               "
 "----------------------------------"
 colorscheme henri-default
-syntax enable
-set showmatch
-
-set encoding=utf8
-
 
 "----------------------------------"
 "          Moving Arond            "
@@ -111,6 +92,10 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
+"----------------------------------"
+"           Airline Conf           "
+"----------------------------------"
+let g:airline_left_sep='>'
 
 "----------------------------------"
 "           Status Line            "
@@ -118,6 +103,5 @@ set viminfo^=%
 " This one sucked....
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
-" This is the latest beauty
-" Just have to figure out how to display current line out of total lines
+" This is the latest beauty. Still need to add some things. 
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%m%r%y%=%c,%l/%L\ %P
