@@ -55,22 +55,37 @@ set hlsearch
 syntax enable
 set showmatch
 
+filetype plugin on
+
+set number
+
 " Disabling this for now
 " set cursorline
 " set nocursorcolumn
 
 "----------------------------------"
-" Some Python developement stuff:
+"  Some Python developement stuff  "
 "----------------------------------"
 autocmd Filetype python setlocal expandtab ts=4 sw=4 sts=4
 let g:syntastic_python_checkers = ["flake8"]
 let g:syntastic_python_flake8_args = "--max-line-length=160"
 
 "----------------------------------"
-" Some C/C++ developement stuff:
+"   Some C/C++ developement stuff  "
 "----------------------------------"
 autocmd Filetype cpp setlocal noexpandtab ts=4 sw=4 sts=4
-autocmd Filetype c setlocal noexpandtab ts=4 sw=4 sts=4
+
+"----------------------------------"
+"    Some Go developement stuff    "
+"----------------------------------"
+autocmd Filetype go setlocal noexpandtab ts=4 sw=4 sts=4
+let g:go_disable_autoinstall = 0
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 "----------------------------------"
 "             Colors               "
