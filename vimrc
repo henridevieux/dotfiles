@@ -51,6 +51,8 @@ set confirm
 
 set hlsearch
 
+set cursorline
+
 
 "----------------------------------"
 "           Airline Conf           "

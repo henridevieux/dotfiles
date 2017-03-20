@@ -40,3 +40,17 @@ fi
 
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
+
+# Disable all sounds
+bind "set bell-style none"
+
+# Treat cases as equal for autocomplete
+bind "set completion-map-case on"
+bind "set completion-ignore-case on"
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# save multi-line commands as one command
+shopt -s cmdhist
+
