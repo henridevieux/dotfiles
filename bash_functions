@@ -34,3 +34,13 @@ editsync () {
 opensync () {
     _sync_dir open @o
 }
+
+# Function to rename tmux windows
+tmux_rename() {
+   if [ -z "$1" ]; then
+       printf "\033k$(hostname -s)\033\\"
+       return
+   else
+       printf "\033k$1\033\\"
+   fi
+}
