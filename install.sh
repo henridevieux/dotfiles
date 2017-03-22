@@ -11,7 +11,7 @@ MANAGED_FILES="bashrc\
                bash_aliases\
                tmux.conf\
                vimrc\
-               vim/"
+               vim"
 
 # create dotfiles_old in homedir
 echo "Creating backup dir: $BACKUP_DIR"
@@ -30,6 +30,6 @@ done
 for file in $MANAGED_FILES
 do
     printf "Installing symlink to $file..."
-    ln -s "$HOME"/dotfiles/$file "$HOME"/file
+    ln -s "$HOME"/dotfiles/$file "$HOME"/.$file
     echo " DONE"
 done
