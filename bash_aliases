@@ -3,3 +3,4 @@
 #
 
 alias tmux="TERM=screen-256color-bce tmux"
+alias tn="tmux_rename"
