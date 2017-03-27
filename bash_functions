@@ -3,12 +3,6 @@
 #
 
 git_branch_info() {
-  #   output=$(git branch 2> /dev/null)
-  #   if [ $? -ne 0 ]; then
-  #       echo ""
-  #   else
-  #       echo $output | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-  #  fi
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
@@ -39,7 +33,6 @@ opensync () {
 tmux_rename() {
    if [ -z "$1" ]; then
        printf "\033k$(hostname -s)\033\\"
-       return
    else
        printf "\033k$1\033\\"
    fi
