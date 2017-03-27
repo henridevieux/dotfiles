@@ -63,6 +63,12 @@ set number
 " set cursorline
 " set nocursorcolumn
 
+
+"----------------------------------"
+"  Some Shell developement stuff   "
+"----------------------------------"
+autocmd Filetype sh setlocal expandtab ts=4 sw=4 sts=4
+
 "----------------------------------"
 "  Some Python developement stuff  "
 "----------------------------------"
@@ -74,6 +80,7 @@ let g:syntastic_python_flake8_args = "--max-line-length=160"
 "   Some C/C++ developement stuff  "
 "----------------------------------"
 autocmd Filetype cpp setlocal noexpandtab ts=4 sw=4 sts=4
+autocmd Filetype c setlocal noexpandtab ts=4 sw=4 sts=4
 
 "----------------------------------"
 "    Some Go developement stuff    "

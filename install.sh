@@ -13,23 +13,40 @@ MANAGED_FILES="bashrc\
                vimrc\
                vim"
 
-# create dotfiles_old in homedir
-echo "Creating backup dir: $BACKUP_DIR"
-rm -rf $BACKUPDIR 
+function GIT_CMD() {
+    git --git-dir="$DOTFILES_DIR"/.git --work-tree="$DOTFILES_DIR" "$@"
+}
 
-echo ""
-mkdir -p $BACKUP_DIR
+# verify things are ready
+if [ ! -d "$DOTFILES_DIR" ]; then
+    echo "$DOTFILES_DIR not found. Exiting"
+    exit 1
+fi
 
-for file in $MANAGED_FILES
+GIT_CMD diff-index --quiet HEAD -- \
+    && GIT_CMD pull \
+    || echo "WARNING: Unstaged changes to dotfiles repo."
+
+if [ -d "$BACKUP_DIR" ]; then
+    printf "Overwriting backup dir... "
+    rm -rf "$BACKUP_DIR"
+    echo "DONE"
+fi
+mkdir -p "$BACKUP_DIR"
+
+# install links to managed dotfiles, backing up any existing
+# ones that might already be installed
+for f in $MANAGED_FILES
 do
-    printf "Backing up $file in $BACKUP_DIR..."
-    mv "$HOME"/.$file $BACKUP_DIR/ 2> /dev/null
-    echo " DONE"
-done
+    if [ "$(dirname "$(readlink "$HOME"/."$f")")" == "$DOTFILES_DIR" ]; then
+        echo "$f already linked"
+    else
+        if [ -e "$HOME"/."$f" ]; then
+            echo "Backing up $f"
+            mv "$HOME"/."$f" "$BACKUP_DIR/"
+        fi
 
-for file in $MANAGED_FILES
-do
-    printf "Installing symlink to $file..."
-    ln -s "$HOME"/dotfiles/$file "$HOME"/.$file
-    echo " DONE"
+        echo "Installing symlink to $f"
+        ln -s "$DOTFILES_DIR"/"$f" "$HOME"/."$f"
+    fi
 done
