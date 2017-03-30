@@ -10,6 +10,7 @@ MANAGED_FILES="bashrc\
                bash_profile\
                bash_aliases\
                tmux.conf\
+               tmux\
                vimrc\
                vim"
 

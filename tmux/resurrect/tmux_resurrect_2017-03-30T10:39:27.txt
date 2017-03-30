@@ -1,0 +1,4 @@
+pane	main	1	:usentry	1	:*	0	:/Users/hdevieux/gocode/src/code.uber.internal	0	bash	:
+pane	main	1	:usentry	1	:*	1	:/Users/hdevieux	1	bash	:
+window	main	1	1	:*	bd10,428x128,0,0{197x128,0,0,57,230x128,198,0,74}
+state	main	
