@@ -51,3 +51,8 @@ do
         ln -s "$DOTFILES_DIR"/"$f" "$HOME"/."$f"
     fi
 done
+
+# Tmux directory for resurrection backups
+if [ ! -d "$HOME"/.tmux_resurrection ]; then
+    mkdir "$HOME"/.tmux_resurrection
+fi
