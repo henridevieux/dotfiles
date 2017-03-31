@@ -1,0 +1,5 @@
+# Everything in this directory should be ignored from git
+# it gets populated via .tmux.conf commands
+*
+#
+!.gitignore

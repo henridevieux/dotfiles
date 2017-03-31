@@ -1,4 +1,4 @@
-# Ignore tmux directory
+# Ignore tmux directory contents
 # this directory is populated via commands in .tmux.conf
-tmux/
+tmux/*
 .netrwhist
