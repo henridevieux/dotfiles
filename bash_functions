@@ -1,6 +1,7 @@
-#
-# Hdevieux .bash_functions 
-#
+# hdevieux
+# .bash_functions
+# This file is managed by dotfiles repository
+# Last updated: 3/27/2017
 
 git_branch_info() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

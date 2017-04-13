@@ -1,6 +1,7 @@
-#
-# Hdevieux .bashrc
-#
+# hdevieux
+# .bashrc
+# This file is managed by dotfiles repository
+# Last updated: 3/22/2017
 
 # Source external functions
 test -f "${HOME}"/.bash_functions && source "${HOME}"/.bash_functions
@@ -50,4 +51,3 @@ shopt -s cmdhist
 
 # Machine-local configurations. These override previous settings
 test -f "${HOME}"/.bash_local && source "${HOME}"/.bash_local
-

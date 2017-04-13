@@ -1,16 +1,40 @@
 # dotfiles
-Henri's working environment completely checked in. 
+This repository contains my working environment, which primarily consists of:
+  * Bash
+  * tmux
+  * Vim
+  * iTerm2, when on mac
 
-## New Laptop Setup
-1. Create SSH key and add to github
-```
-ssh-keygen -t rsa -b 4096 
-```
-2. Clone the repository into home directory
-```
-git clone git@github.com:henridevieux/dotfiles.git
-```
-3. Run the install script
-```
-dotfiles/install.sh
-```
+# Setup
+The actual dotfiles are symlinks to the files in this repository and are
+installed using the install.sh script.
+
+Any bash configurations that are specific to one computer are placed in
+~/.bash_local and not checked into this repository.
+
+  1. Clone this repository into ~/dotfiles
+  2. Run the install script: `~/dotfiles/install.sh`
+  3. Old dotfiles will be backed up in ~/.dotfiles_backup
+  4. The following are now symlinks:
+    * .bashrc
+    * .bash_profile
+    * .bash_functions
+    * .bash_aliases
+    * .tmux.conf
+    * .vim/
+    * .tmux/
+    * .iterm/
+
+### A note about the .tmux directory
+tmux plugins are pulled from git and stored in ~/.tmux/ such that they are not
+checked into this repository.
+The .tmux/ directory here is empty except for the .gitignore to keep it that way
+
+When tmux starts, plugins are downloaded and installed if they are not already
+there. This is done via tmux itself at the very bottom of tmux.conf
+
+### A note about iTerm2
+On my macOS machines, iTerm2 is configured to read and save settings to the
+~/.iterm/ directory, which is a symlink like the other dotfiles. After making
+any changes, iTerm should prompt to save the new settings, which can then be
+checked in.

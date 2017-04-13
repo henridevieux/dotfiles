@@ -1,6 +1,7 @@
-#
-# Hdevieux .bash_aliases
-#
+# hdevieux
+# .bash_aliases
+# This file is managed by dotfiles repository
+# Last updated: 3/27/2017
 
 # tmux aliases
 alias tmux="TERM=screen-256color-bce tmux"
