@@ -12,7 +12,9 @@ nmap <leader>e :wq!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>s :ConqueTermVSplit bash<cr>
 nmap <leader>d :ConqueTermSplit bash<cr>
-nmap <leader>j <C-W><C-W>
+
+" My notepad 
+nmap <leader>n :vnew ~/tmp/notepad<cr>
 
 execute pathogen#infect('~/.vim/bundle/{}')
 
@@ -58,6 +60,9 @@ set showmatch
 filetype plugin on
 
 set number
+
+set splitbelow
+set splitright
 
 " Disabling this for now
 " set cursorline
@@ -113,6 +118,15 @@ autocmd BufReadPost *
 
 " Remember info about open buffers on close
 set viminfo^=%
+
+" Easier switching between tabs
+nmap <leader><tab> :tabn<cr>
+
+" Switching between splits
+nmap <leader>j <C-W><C-J>
+nmap <leader>k <C-W><C-K>
+nmap <leader>l <C-W><C-L>
+nmap <leader>h <C-W><C-H>
 
 "----------------------------------"
 "           Airline Conf           "
