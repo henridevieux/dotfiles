@@ -11,6 +11,7 @@ MANAGED_FILES="bashrc\
                bash_functions\
                bash_profile\
                bash_aliases\
+               emacs.d\
                tmux.conf\
                tmux\
                vimrc\
