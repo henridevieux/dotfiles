@@ -33,7 +33,7 @@
      "t" 'neotree-toggle
      ;; Projectile
      "p" 'projectile-find-file
-     ;; Ranger
+     ;; Dired
      "f" 'dired
      ;; File and Buffer management
      "b" 'ibuffer

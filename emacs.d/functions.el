@@ -15,3 +15,9 @@
   (interactive)
   (if (eq (frame-parameter nil 'fullscreen) 'fullboth) (my-non-fullscreen)
     (my-fullscreen)))
+
+ (defun load-directory (dir)
+      (let ((load-it (lambda (f)
+		       (load-file (concat (file-name-as-directory dir) f)))
+		     ))
+	(mapc load-it (directory-files dir nil "\\.el$"))))

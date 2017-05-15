@@ -27,14 +27,6 @@
             (lambda ()
               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
-;; Ranger
-;; (use-package ranger
-  ;; ;; :ensure t
-  ;; :commands (ranger)
-  ;; :config
-  ;; ;; (ranger-override-dired-mode t)
-  ;; (setq ranger-preview-file nil))
-
 ;; Projectile
 (use-package projectile
   :ensure t
@@ -53,13 +45,18 @@
       (ido-mode -1)
       (ivy-mode 1)))
 )
+
 ;; Counsel
 (use-package counsel
   :ensure t)
 
+;; Load common files
 (load "~/.emacs.d/functions")
 (load "~/.emacs.d/display")
 (load "~/.emacs.d/keybindings")
+
+;; Language specific configurations live in this directory
+(load-directory "~/.emacs.d/code")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -68,7 +65,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-escape which-key use-package spacemacs-theme general evil avy))))
+    (go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
