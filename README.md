@@ -4,6 +4,7 @@ This repository contains my working environment, which primarily consists of:
   * tmux
   * Vim
   * iTerm2, when on mac
+  * Emacs, in evil mode
 
 # Setup
 The actual dotfiles are symlinks to the files in this repository and are
@@ -20,6 +21,7 @@ Any bash configurations that are specific to one computer are placed in
     * .bash_profile
     * .bash_functions
     * .bash_aliases
+    * .emacs.d/
     * .tmux.conf
     * .vim/
     * .tmux/
@@ -32,6 +34,10 @@ The .tmux/ directory here is empty except for the .gitignore to keep it that way
 
 When tmux starts, plugins are downloaded and installed if they are not already
 there. This is done via tmux itself at the very bottom of tmux.conf
+
+### A note about the .emacs.d directory
+Packages are currently not checked in, and directories such as .emacs.d/elpa
+are for now ignored from git.
 
 ### A note about iTerm2
 On my macOS machines, iTerm2 is configured to read and save settings to the
