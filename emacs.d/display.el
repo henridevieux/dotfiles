@@ -9,3 +9,9 @@
 
 ;; Show lines
 (global-linum-mode t)
+
+;; Perspective for managing workspaces
+(use-package perspective
+  :ensure t
+  :config
+  (persp-mode))

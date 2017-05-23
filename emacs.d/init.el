@@ -22,10 +22,6 @@
     ;; Neotree can't be open by itself
     (setq-default neo-dont-be-alone t))
 )
-;; Necessary for neotree to work with evil mode  
-(add-hook 'neotree-mode-hook
-            (lambda ()
-              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 ;; Projectile
 (use-package projectile
@@ -54,9 +50,17 @@
 (load "~/.emacs.d/functions")
 (load "~/.emacs.d/display")
 (load "~/.emacs.d/keybindings")
+(load "~/.emacs.d/shell")
+
 
 ;; Language specific configurations live in this directory
 (load-directory "~/.emacs.d/code")
+
+;; Fix backing up of files
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -65,7 +69,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
+    (go-autocomplete go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

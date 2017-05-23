@@ -13,11 +13,4 @@
     :init
     (add-hook 'go-mode-hook 'go-eldoc-setup))
   (use-package go-autocomplete
-    :ensure t
-    :init
-    (add-hook 'go-mode-hook 'auto-complete-for-go)))
-
-  
-;; Recommendation from gocode issue #325
-(with-eval-after-load 'go-mode
-  (require 'go-autocomplete))
+    :ensure t))
