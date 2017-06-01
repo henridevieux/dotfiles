@@ -8,7 +8,12 @@
   :init (load-theme 'spacemacs-dark t))
 
 ;; Show lines
-(global-linum-mode t)
+(use-package nlinum
+  :ensure t
+  :config (add-hook 'prog-mode-hook '(lambda () (nlinum-mode t))))
+
+;;(add-hook 'shell-mode-hook (lambda ()
+ ;;(linum-mode -1)))
 
 ;; Perspective for managing workspaces
 (use-package perspective

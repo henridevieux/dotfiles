@@ -34,7 +34,7 @@
      "C-n" 'persp-switch
      "C-r" 'persp-rename
      "C-x" 'persp-kill
-     ;s Shell manipulation
+     ;; Shell manipulation
      "s" 'ansi-term
      ;; NeoTree
      "t" 'neotree-toggle
