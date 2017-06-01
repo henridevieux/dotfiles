@@ -28,7 +28,7 @@
   :ensure t
   :commands (projectile-find-file projectile-find-dir)
   :config
-  (projectile-global-mode t)
+  (projectile-mode t)
   (setq projectile-switch-project-action 'neotree-projectile-action))
 
 ;; Ivy
@@ -45,6 +45,11 @@
 ;; Counsel
 (use-package counsel
   :ensure t)
+
+;; Magit
+(use-package magit
+  :ensure t
+  :commands (magit-status))
 
 ;; Load common files
 (load "~/.emacs.d/functions")
