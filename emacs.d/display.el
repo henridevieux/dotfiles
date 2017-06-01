@@ -2,6 +2,8 @@
 (add-to-list 'default-frame-alist '(height . 65))
 (add-to-list 'default-frame-alist '(width . 200))
 
+(global-visual-line-mode nil)
+
 ;; Spacemacs theme
 (use-package spacemacs-theme
   :ensure t
@@ -11,9 +13,6 @@
 (use-package nlinum
   :ensure t
   :config (add-hook 'prog-mode-hook '(lambda () (nlinum-mode t))))
-
-;;(add-hook 'shell-mode-hook (lambda ()
- ;;(linum-mode -1)))
 
 ;; Perspective for managing workspaces
 (use-package perspective
