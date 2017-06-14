@@ -15,6 +15,7 @@
 
 (use-package flycheck
   :ensure t
+  :diminish flycheck-mode
   :init
   (global-flycheck-mode)
   :config

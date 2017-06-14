@@ -27,9 +27,16 @@
     (setq-default neo-dont-be-alone t))
 )
 
+;; Undo-Tree
+(use-package undo-tree
+  :ensure t
+  :diminish undo-tree-mode
+  :init (global-undo-tree-mode))
+
 ;; Projectile
 (use-package projectile
   :ensure t
+  :diminish projectile-mode
   :commands (projectile-find-file projectile-find-dir)
   :config
   (projectile-mode t)
@@ -38,6 +45,7 @@
 ;; Ivy
 (use-package ivy
   :ensure t
+  :diminish ivy-mode
   :config
   (progn
     ;; Disable ido, to use ivy instead
@@ -54,6 +62,10 @@
 (use-package magit
   :ensure t
   :commands (magit-status))
+
+;; Diminish
+(use-package diminish
+  :ensure t)
 
 ;; Load common files
 (load "~/.emacs.d/functions")

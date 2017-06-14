@@ -4,6 +4,9 @@
 
 (global-visual-line-mode nil)
 
+;; Diminish unecessary modes
+(diminish 'visual-line-mode)
+
 ;; Spacemacs theme
 (use-package spacemacs-theme
   :ensure t

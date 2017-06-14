@@ -6,6 +6,7 @@
 
 (use-package evil-escape
   :ensure t
+  :diminish evil-escape-mode
   :config
   (evil-escape-mode)
   (setq-default evil-escape-key-sequence "kj")
@@ -40,6 +41,9 @@
      "t" 'neotree-toggle
      ;; Projectile
      "p" 'projectile-find-file
+     ;; Code management
+     "C-c" 'comment-region
+     "C-u" 'uncomment-region
      ;; File and Buffer management
      "b" 'ibuffer
      "w" 'save-buffer
@@ -48,6 +52,7 @@
      "f" 'counsel-find-file
      ;; Misc admin
      "SPC" 'counsel-M-x))
+
     
 ;; Necessary for neotree to work with evil mode
 (add-hook 'neotree-mode-hook
