@@ -22,3 +22,11 @@
   (progn
     (setq-local flycheck-highlighting-mode nil)
     (setq-local flycheck-check-syntax-automatically nil)))
+
+(use-package smartparens
+  :ensure t
+  :diminish smartparens-global-mode
+  :init
+  (progn
+    (use-package smartparens-config)
+    (smartparens-global-mode 1)))
