@@ -4,6 +4,13 @@
 
 (global-visual-line-mode nil)
 
+
+;; Smoother scrolling
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+
+
 ;; Diminish unecessary modes
 (diminish 'visual-line-mode)
 

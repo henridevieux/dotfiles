@@ -9,8 +9,7 @@
 
     (ac-set-trigger-key "TAB")
 
-    (setq ac-modes '(go-mode
-		     python-mdoe))))
+    (setq ac-modes '(go-mode python-mode c++-mode c-mode))))
 
 
 (use-package flycheck
