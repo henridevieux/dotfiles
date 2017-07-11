@@ -9,7 +9,7 @@
 
     (ac-set-trigger-key "TAB")
 
-    (setq ac-modes '(go-mode python-mode c++-mode c-mode))))
+    (setq ac-modes '(c-mode c++-mode go-mode python-mode rust-mode))))
 
 
 (use-package flycheck
@@ -24,7 +24,7 @@
 
 (use-package smartparens
   :ensure t
-  :diminish smartparens-global-mode
+  :diminish smartparens-mode
   :init
   (progn
     (use-package smartparens-config)

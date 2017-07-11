@@ -38,6 +38,11 @@ fi
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
+# Rust Path
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH="$PATH:$HOME/.cargo/bin"
+fi
+
 # Disable sounds
 bind "set bell-style none"
 

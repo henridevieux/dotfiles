@@ -90,7 +90,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (google-c-style markdown-mode go-autocomplete go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
+    (flycheck-rust google-c-style markdown-mode go-autocomplete go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
