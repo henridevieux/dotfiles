@@ -6,10 +6,20 @@
   :config
   (progn
     (ac-config-default)
-
     (ac-set-trigger-key "TAB")
 
     (setq ac-modes '(c-mode c++-mode go-mode python-mode rust-mode))))
+
+(use-package whitespace
+  :ensure t
+  :init
+  (dolist (hook '(prog-mode-hook text-mode-hook))
+    (add-hook hook #'whitespace-mode))
+  (add-hook 'before-save-hook #'whitespace-cleanup)
+  :config
+  (setq whitespace-line-column 80)
+  (setq whitespace-style '(face tabs trailing lines-tail)))
+
 
 
 (use-package flycheck

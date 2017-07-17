@@ -8,6 +8,7 @@
   (setenv "PATH" (concat (getenv "PATH") ":/Users/hdevieux/gocode/bin"))
   (setq exec-path (append exec-path '("/Users/hdevieux/gocode/bin")))
   (setq gofmt-command "goimports")
+  (setq whitespace-line-column 120)
   (use-package go-eldoc
     :ensure t
     :init

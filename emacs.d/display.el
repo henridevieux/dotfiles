@@ -1,16 +1,22 @@
+;; Minimilist UI
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; Font
+(set-default-font "Source Code Pro" nil t)
+
 ;; Make frame bigger upon initial loading
 (add-to-list 'default-frame-alist '(height . 65))
 (add-to-list 'default-frame-alist '(width . 200))
 
 ;; Show Line and column numbers
-(global-visual-line-mode nil)
+(global-visual-line-mode 1)
 (setq column-number-mode t)
 
 ;; Smoother scrolling
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
 (setq auto-window-vscroll nil)
-
 
 ;; Diminish unecessary modes
 (diminish 'visual-line-mode)

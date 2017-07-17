@@ -10,5 +10,6 @@
     (progn
       (add-hook 'c-mode-common-hook 'google-set-c-style)
       (add-hook 'c-mode-common-hook 'google-make-newline-indent))
+
     :config
     (c-set-offset 'statement-case-open 0)))
