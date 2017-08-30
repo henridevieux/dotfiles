@@ -5,8 +5,8 @@
 "----------------------------------"
 set history=50
 
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 nmap <leader>w :w<cr>
 nmap <leader>e :wq!<cr>
 nmap <leader>q :q!<cr>
