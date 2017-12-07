@@ -13,6 +13,9 @@ nmap <leader>q :q!<cr>
 nmap <leader>s :ConqueTermVSplit bash<cr>
 nmap <leader>d :ConqueTermSplit bash<cr>
 
+" Replicate evil-escape-key-sequence
+:imap kj <Esc>
+
 " My notepad 
 nmap <leader>n :vnew ~/tmp/notepad<cr>
 
