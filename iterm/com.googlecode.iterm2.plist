@@ -511,6 +511,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelSizeSliderParams</key>
+	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -559,15 +561,15 @@
 		<string>@l</string>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1111 319 693 437 0 0 1920 1177 </string>
+	<string>2415 607 693 303 0 0 3360 1890 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>-1050 712 606 456 -1920 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>3658 678 620 392 3008 90 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1952 1210 796 473 0 0 3360 1890 </string>
+	<string>349 429 796 473 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 381 1130 677 0 0 3360 1867 </string>
+	<string>0 0 1920 1200 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1164,7 +1166,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 14</string>
+			<string>Menlo-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1330,7 +1332,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.0491399190512047</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
