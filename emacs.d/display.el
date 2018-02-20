@@ -3,7 +3,7 @@
 (scroll-bar-mode -1)
 
 ;; Font
-(set-default-font "Source Code Pro" nil t)
+(set-frame-font "Source Code Pro-14" nil t)
 
 ;; Make frame bigger upon initial loading
 (add-to-list 'default-frame-alist '(height . 65))

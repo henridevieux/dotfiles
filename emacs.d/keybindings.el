@@ -53,7 +53,6 @@
      ;; Misc admin
      "SPC" 'counsel-M-x))
 
-    
 ;; Necessary for neotree to work with evil mode
 (add-hook 'neotree-mode-hook
             (lambda ()
