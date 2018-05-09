@@ -3,7 +3,7 @@
   :mode ("\\.go$" . go-mode)
   :config
   (auto-complete-mode 1)
-  (add-hook 'before-save-hook 'gofmt-before-save)
+  (add-hook 'before-save-hook #'gofmt-before-save)
   (setenv "GOPATH" "/Users/hdevieux/gocode")
   (setenv "PATH" (concat (getenv "PATH") ":/Users/hdevieux/gocode/bin"))
   (setq exec-path (append exec-path '("/Users/hdevieux/gocode/bin")))

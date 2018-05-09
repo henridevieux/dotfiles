@@ -28,19 +28,20 @@ fi
 
 export EDITOR=/usr/bin/vim
 
-export PATH=/Users/hdevieux/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# Tmux inherits PATH, so avoid repeated entries
+if [ -z "$TMUX" ]; then
+    # Local binaries
+    export PATH="$PATH:$HOME/bin"
 
-if [ "$(uname)" == 'Darwin' ]; then
-    export PATH=$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH:$HOME/bin
-fi
+    # GO Paths
+    export GOPATH="$HOME/gocode"
+    export PATH="$PATH:$GOPATH/bin"
+    export PATH="$PATH:/usr/local/go/bin"
 
-# GO PATH
-export GOPATH="$HOME/gocode"
-export PATH="$PATH:$GOPATH/bin"
-
-# Rust Path
-if [ -d "$HOME/.cargo/bin" ]; then
-    export PATH="$PATH:$HOME/.cargo/bin"
+    # Rust Path
+    if [ -d "$HOME/.cargo/bin" ]; then
+        export PATH="$PATH:$HOME/.cargo/bin"
+    fi
 fi
 
 # Disable sounds
