@@ -73,6 +73,9 @@
 (load "~/.emacs.d/keybindings")
 (load "~/.emacs.d/shell")
 
+;; Popup, required for autocomplete
+(use-package popup
+  :ensure t)
 
 ;; Language specific configurations live in this directory
 (load-directory "~/.emacs.d/code")

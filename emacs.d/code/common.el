@@ -1,14 +1,17 @@
+;; (use-package auto-complete
+;;   :ensure t
+;;   :init
+;;   (progn
+;;     (ac-config-default)
+;;     (auto-complete-mode t))
+;;   :config
+;;   (progn
+;;     (ac-set-trigger-key "TAB")
+;;     (setq ac-modes '(c-mode c++-mode python-mode rust-mode))))
 (use-package auto-complete
   :ensure t
   :init
-  (progn
-    (auto-complete-mode t))
-  :config
-  (progn
-    (ac-config-default)
-    (ac-set-trigger-key "TAB")
-
-    (setq ac-modes '(c-mode c++-mode go-mode python-mode rust-mode))))
+    (ac-config-default))
 
 (use-package whitespace
   :ensure t
@@ -19,8 +22,6 @@
   :config
   (setq whitespace-line-column 80)
   (setq whitespace-style '(face tabs trailing lines-tail)))
-
-
 
 (use-package flycheck
   :ensure t
