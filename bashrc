@@ -44,13 +44,6 @@ if [ -z "$TMUX" ]; then
     fi
 fi
 
-# Disable sounds
-bind "set bell-style none"
-
-# Treat cases equal for autocomplete
-bind "set completion-map-case on"
-bind "set completion-ignore-case on"
-
 # Append to history
 shopt -s histappend
 shopt -s cmdhist

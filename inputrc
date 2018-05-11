@@ -1,0 +1,6 @@
+# Disable sounds
+set bell-style none
+
+# Treat cases equal for autocomplete
+set completion-map-case on
+set completion-ignore-case on

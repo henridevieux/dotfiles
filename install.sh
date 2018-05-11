@@ -12,6 +12,7 @@ MANAGED_FILES="bashrc\
                bash_profile\
                bash_aliases\
                emacs.d\
+               inputrc\
                tmux.conf\
                tmux\
                vimrc\
