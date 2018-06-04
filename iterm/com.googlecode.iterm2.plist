@@ -600,10 +600,12 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>416 142 676 359 0 0 2560 1417 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>532 957 735 382 0 0 3360 1867 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>373 472 796 473 0 0 2560 1417 </string>
+	<string>1061 988 1018 447 0 0 3360 1867 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>254 71 1290 877 0 0 1680 1027 </string>
+	<string>1300 416 1674 1027 0 0 3360 1867 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1422,7 +1424,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-07T16:37:18Z</date>
+	<date>2018-05-16T21:57:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1458,6 +1460,8 @@
 	<key>UseCompactLabel</key>
 	<true/>
 	<key>UseLionStyleFullscreen</key>
+	<true/>
+	<key>UseSystemCursorWhenPossible</key>
 	<true/>
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>

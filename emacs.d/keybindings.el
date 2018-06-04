@@ -40,7 +40,7 @@
      ;; NeoTree
      "t" 'neotree-toggle
      ;; Projectile
-     "p" 'projectile-find-file
+     "p" 'projectile-find-file-in-directory
      ;; Code management
      "C-c" 'comment-region
      "C-u" 'uncomment-region
