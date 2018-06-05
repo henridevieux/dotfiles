@@ -1,6 +1,7 @@
 (use-package python
   :ensure t
-  :mode ("\\.py\\'" . python-mode)
+  :mode (("\\.py\\'" . python-mode)
+         ("\\.pyst\\'" . python-mode))
   :interpreter ("python" . python-mode)
   :config
   (setq-default indent-tabs-mode nil)
