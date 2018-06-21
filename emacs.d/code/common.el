@@ -10,17 +10,19 @@
 ;;     (setq ac-modes '(c-mode c++-mode python-mode rust-mode))))
 (use-package auto-complete
   :ensure t
+  :diminish auto-complete-mode
   :init
     (ac-config-default))
 
 (use-package whitespace
   :ensure t
+  :diminish whitespace-mode
   :init
   (dolist (hook '(prog-mode-hook text-mode-hook))
     (add-hook hook #'whitespace-mode))
   (add-hook 'before-save-hook #'whitespace-cleanup)
   :config
-  (setq whitespace-line-column 80)
+    (setq whitespace-line-column 100)
   (setq whitespace-style '(face tabs trailing lines-tail)))
 
 (use-package flycheck

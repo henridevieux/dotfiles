@@ -8,6 +8,9 @@
 ;; Disable bell sounds
 (setq ring-bell-function 'ignore)
 
+;; Add to PATH
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
@@ -88,6 +91,8 @@
 
 ;; Revert all buffers at once
 (global-auto-revert-mode t)
+;; make ibuffer refresh automatically
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -96,7 +101,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-rust google-c-style markdown-mode go-autocomplete go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
+    (elpy jedi pythonic flycheck-rust google-c-style markdown-mode go-autocomplete go-eldoc evil-escape which-key use-package spacemacs-theme general evil avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
