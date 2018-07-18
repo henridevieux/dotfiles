@@ -30,6 +30,7 @@
      "j" 'windmove-down
      "k" 'windmove-up
      "l" 'windmove-right
+     "C-=" 'balance-windows
      ;; Perspective workspace management
      "TAB" 'persp-next
      "C-n" 'persp-switch
