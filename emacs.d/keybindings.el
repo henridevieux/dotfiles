@@ -35,6 +35,7 @@
      "C-n" 'persp-switch
      "C-r" 'persp-rename
      "C-x" 'persp-kill
+     "C-=" 'balance-windows
      ;; Shell manipulation
      "s" 'ansi-term
      ;; NeoTree

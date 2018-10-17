@@ -26,7 +26,14 @@ elif [ "$(uname)" == 'Linux' ]; then
     alias ls='ls --color=always'
 fi
 
-export EDITOR=/usr/bin/vim
+# Switch EDITOR depending on whether we're running in emacs or not
+if [ -z "$INSIDE_EMACS" ]; then
+    export EDITOR=/usr/bin/vim
+else
+	export ALTERNATE_EDITOR=""
+	export EDITOR="/usr/local/bin/emacsclient"
+	export VISUAL="/usr/local/bin/emacsclient"
+fi
 
 # Tmux inherits PATH, so avoid repeated entries
 if [ -z "$TMUX" ]; then
