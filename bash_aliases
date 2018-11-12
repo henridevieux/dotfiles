@@ -8,7 +8,7 @@ alias c="clear"
 
 # tmux aliases
 alias tmux="TERM=screen-256color-bce tmux"
-alias tn="tmux_rename"
+alias tn="tmux rename-window"
 alias tm="tmux attach -t main || tmux new -s main"
 
 # git aliases
