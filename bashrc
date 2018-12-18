@@ -54,6 +54,8 @@ fi
 # Append to history
 shopt -s histappend
 shopt -s cmdhist
+# Format timestamp for history
+export HISTTIMEFORMAT="%m/%d/%y %T "
 
 # Machine-local configurations. These override previous settings
 test -f "${HOME}"/.bash_local && source "${HOME}"/.bash_local
