@@ -17,15 +17,15 @@ Any bash configurations that are specific to one computer are placed in
   2. Run the install script: `~/dotfiles/install.sh`
   3. Old dotfiles will be backed up in ~/.dotfiles_backup
   4. The following are now symlinks:
-    * .bashrc
-    * .bash_profile
-    * .bash_functions
-    * .bash_aliases
-    * .emacs.d/
-    * .tmux.conf
-    * .vim/
-    * .tmux/
-    * .iterm/
+   * .bashrc
+   * .bash_profile
+   * .bash_functions
+   * .bash_aliases
+   * .emacs.d/
+   * .tmux.conf
+   * .vim/
+   * .tmux/
+   * .iterm/
 
 ### A note about the .tmux directory
 tmux plugins are pulled from git and stored in ~/.tmux/ such that they are not
