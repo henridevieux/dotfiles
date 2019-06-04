@@ -33,6 +33,7 @@
   :config
   (progn
     (setq-local flycheck-highlighting-mode nil)
+    (setq-default flycheck-flake8-maximum-line-length 120)
     (setq-local flycheck-check-syntax-automatically nil)))
 
 (use-package smartparens
